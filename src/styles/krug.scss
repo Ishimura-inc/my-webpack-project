@@ -4,7 +4,7 @@ $size: 530px;
 $dot-size: 6px;
 $active-size: 56px;
 $N: 6;
-$total: 6;
+$total: $N;
 
 $r: math.div($size, 2);
 $offset-angle: 30deg;
@@ -24,11 +24,13 @@ $offset-angle: 30deg;
     $angle: math.div($i - 1, $N) * 360deg + $offset-angle - 90deg;
 
     .dot-#{$i} {
+	font-weight: 400;
       @extend .dot;
       left: calc(50% + #{$r * math.cos($angle)});
       top: calc(50% + #{$r * math.sin($angle)});
 
       &::after {
+	  font-weight: 400;
         content: "#{$i}";
         position: absolute;
         top: 50%;
@@ -36,7 +38,6 @@ $offset-angle: 30deg;
         transform: translate(-50%, -50%) rotate(var(--rotation, 0deg));
         color: #42567a;
         font-size: 20px;
-        font-weight: bold;
         opacity: 0;
         transition: opacity 0.3s ease;
         pointer-events: none;
@@ -44,6 +45,7 @@ $offset-angle: 30deg;
       }
 
       &::before {
+	  font-weight: 400;
         content: "";
         position: absolute;
         top: 0; left: 0;
@@ -116,14 +118,21 @@ $offset-angle: 30deg;
 .controls {
   position: absolute;
   top: 697px;
-  padding-left: 80px;
+  margin-left: 80px;
+  width: 120px;
+  height: 88px;
 }
 
 .controls button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 10px;
   cursor: pointer;
 }
+
+.controls-flex {
+display: flex;
+justify-content: space-between;
+}
+
 
 .active-text {
   position: absolute;
@@ -145,6 +154,7 @@ $offset-angle: 30deg;
   color: #42567A;
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
+  margin: 0 0 20px 0;
 }
 
 .swiper {
@@ -236,4 +246,34 @@ $offset-angle: 30deg;
    font-size: 150px;
 	top: -150px;
  }
+}
+
+#rotate-left {
+	  display: inline-grid;
+      border-radius: 50px;
+	  border: 1px solid rgba(48, 62, 88, 0.5);
+	  background: #F4F5F9;
+	  width: 50px;
+      height: 50px;
+	  justify-content: center;
+      align-items: center;
+}
+
+#rotate-right {
+      display: inline-grid;
+      border-radius: 50px;
+	  border: 1px solid rgba(48, 62, 88, 0.5);
+	  background: #F4F5F9;
+	  width: 50px;
+      height: 50px;
+	  justify-content: center;
+      align-items: center;
+}
+
+#rotate-left svg path {
+  stroke: #42567A;
+}
+
+#rotate-right svg path{
+  stroke: #42567A; 
 }

@@ -346,4 +346,3 @@ updateLines();
 
 // При ресайзе окна
 window.addEventListener("resize", updateLines);
-
