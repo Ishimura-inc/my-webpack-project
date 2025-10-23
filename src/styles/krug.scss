@@ -1,0 +1,239 @@
+@use "sass:math";
+
+$size: 530px;
+$dot-size: 6px;
+$active-size: 56px;
+$N: 6;
+$total: 6;
+
+$r: math.div($size, 2);
+$offset-angle: 30deg;
+
+.circle-container {
+  --dot-count: #{$N};
+  position: relative;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: 1px solid rgba(66, 86, 122, 0.2);
+  z-index: 2;
+  top: 215px;
+  margin: 0 auto 0 auto;
+
+  @for $i from 1 through $total {
+    $angle: math.div($i - 1, $N) * 360deg + $offset-angle - 90deg;
+
+    .dot-#{$i} {
+      @extend .dot;
+      left: calc(50% + #{$r * math.cos($angle)});
+      top: calc(50% + #{$r * math.sin($angle)});
+
+      &::after {
+        content: "#{$i}";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(var(--rotation, 0deg));
+        color: #42567a;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 12;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #F4F5F9;
+        z-index: 11;
+        opacity: 0;
+        transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+      }
+    }
+  }
+}
+
+.dot {
+  position: absolute;
+  width: $dot-size;
+  height: $dot-size;
+  border-radius: 50%;
+  background-color: rgba(48, 62, 88, 0.8);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+
+  &:hover {
+    width: $active-size;
+    height: $active-size;
+    background-color: rgba(48, 62, 88, 0.3);
+    border: 2px solid rgb(48 62 88 / 50%);
+    z-index: 10;
+
+    &::before {
+      opacity: 1;
+      width: calc(#{$active-size} - 2px);
+      height: calc(#{$active-size} - 2px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    width: $active-size;
+    height: $active-size;
+    background-color: rgba(48, 62, 88, 0.3);
+    border: 2px solid rgb(48 62 88 / 50%);
+    z-index: 10;
+
+    &::before {
+      opacity: 1;
+      width: calc(#{$active-size} - 2px);
+      height: calc(#{$active-size} - 2px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.controls {
+  position: absolute;
+  top: 697px;
+  padding-left: 80px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.active-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  color: #42567a;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.current-dot-display {
+  font-size: 14px;
+  color: #42567A;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+
+.swiper {
+  width: 100%;
+  height: 135px;
+
+  .swiper-slide {
+  width: 400px !important;
+    display: flex;
+    font-size: 24px;
+    color: #42567A;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+	
+	.year{
+	font-family: 'BebasNeue', sans-serif;
+	font-weight: 400;
+	font-size: 25px;
+	color: #3877EE;
+	line-height: 120%;
+	margin: 0 0 15px 0;
+	}
+	
+	.text-slide{
+	font-size: 20px;
+	color: #42567A;
+	}
+	
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #42567A;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #42567A;
+  }
+}
+
+.swiper-top-position {
+  position: absolute;
+  top: 841px;
+    left: 0;
+    padding-left: 80px;
+    max-width: 1200px;
+  }
+  
+.swiper-pagination {
+  display: none; 
+}
+
+@media (max-width: 320px) {
+  .swiper-pagination {
+    display: block; 
+  }
+}
+
+.swipers-container .swiper {
+  display: none;
+}
+
+.swipers-container .swiper.active {
+  display: block;
+}
+
+.date-display { 
+ position: relative; 
+ top: -185px;
+
+  text-align: center;
+  font-size: 200px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  z-index: 1;
+  
+  .date-start {
+    color: #5D5FEF;
+  }
+
+  .date-end {
+    color: #EF5DA8;
+  }
+}
+
+@media (max-width: 1030px) {
+.date-display {
+   font-size: 150px;
+	top: -150px;
+ }
+}

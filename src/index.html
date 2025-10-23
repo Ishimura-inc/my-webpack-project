@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Круг с точками</title>
+</head>
+<body>
+  <div class="container">
+    <div class="left-present-text">
+	<div class="left-line-gradient"></div>
+      <p>Исторические 
+	  даты</p>
+    </div>
+	
+
+    <!-- Круг с dot-ами -->
+    <div class="circle-container">
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="dot dot-4"></div>
+      <div class="dot dot-5"></div>
+      <div class="dot dot-6"></div>
+    </div>
+	
+	<div class="date-display">
+  <span class="date-start">1930</span> <span class="date-end">1945</span>
+</div>
+	
+	
+	
+	<div class="vertical-line"></div>
+	<div class="horizontal-line"></div>
+	<div class="vertical-line left"></div>
+	<div class="vertical-line right"></div>
+
+    <!-- Кнопки управления -->
+    <div class="controls">
+      <div class="current-dot-display"></div>
+      <button id="rotate-left">⟲ Влево</button>
+      <button id="rotate-right">⟳ Вправо</button>
+    </div>
+
+    <!-- Swiper-ы для каждого dot -->
+    <div class="swiper-top-position">
+      <div class="swipers-container">
+        <!-- Swiper для dot-1 -->
+        <div class="swiper mySwiper dot-1-swiper active">
+          <div class="swiper-wrapper">
+		  
+            <div class="swiper-slide">
+			<div class="year">2015</div> 
+			<div class="text-slide">
+			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">2016</div> 
+			<div class="text-slide">
+			14 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">2017</div>
+			<div class="text-slide">
+			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2018</div>
+			<div class="text-slide">
+			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2019</div>
+			<div class="text-slide">
+			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2020</div>
+			<div class="text-slide">
+			18 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2021</div>
+			<div class="text-slide">
+			19 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			
+			<div class="swiper-slide">
+			<div class="year">2022</div>
+			<div class="text-slide">
+			20 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			
+			<div class="swiper-slide">
+			<div class="year">2023</div>
+			<div class="text-slide">
+			21 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+          </div>
+		  <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+		
+		          
+
+        <!-- Swiper для dot-2 -->
+        <div class="swiper mySwiper dot-2-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Dot 2 - Слайд 1</div>
+            <div class="swiper-slide">Dot 2 - Слайд 2</div>
+            <div class="swiper-slide">Dot 2 - Слайд 3</div>
+			<div class="swiper-slide">Dot 2 - Слайд 4</div>
+			<div class="swiper-slide">Dot 2 - Слайд 5</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper для dot-3 -->
+        <div class="swiper mySwiper dot-3-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Dot 3 - Слайд 1</div>
+            <div class="swiper-slide">Dot 3 - Слайд 2</div>
+            <div class="swiper-slide">Dot 3 - Слайд 3</div>
+			<div class="swiper-slide">Dot 3 - Слайд 4</div>
+			<div class="swiper-slide">Dot 3 - Слайд 5</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper для dot-4 -->
+        <div class="swiper mySwiper dot-4-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Dot 4 - Слайд 1</div>
+            <div class="swiper-slide">Dot 4 - Слайд 2</div>
+            <div class="swiper-slide">Dot 4 - Слайд 3</div>
+			<div class="swiper-slide">Dot 4 - Слайд 4</div>
+			<div class="swiper-slide">Dot 4 - Слайд 5</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper для dot-5 -->
+        <div class="swiper mySwiper dot-5-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Dot 5 - Слайд 1</div>
+            <div class="swiper-slide">Dot 5 - Слайд 2</div>
+            <div class="swiper-slide">Dot 5 - Слайд 3</div>
+			<div class="swiper-slide">Dot 5 - Слайд 4</div>
+			<div class="swiper-slide">Dot 5 - Слайд 5</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper для dot-6 -->
+        <div class="swiper mySwiper dot-6-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Dot 6 - Слайд 1</div>
+            <div class="swiper-slide">Dot 6 - Слайд 2</div>
+            <div class="swiper-slide">Dot 6 - Слайд 3</div>
+			<div class="swiper-slide">Dot 6 - Слайд 4</div>
+			<div class="swiper-slide">Dot 6 - Слайд 5</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Текст над активным dot -->
+    <div class="active-text" aria-hidden="true"></div>
+  </div>
+</body>
+</html>
