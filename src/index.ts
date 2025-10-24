@@ -323,8 +323,8 @@ window.addEventListener("resize", updateLines);
 const globalPrev = document.getElementById("global-prev") as HTMLElement;
 const globalNext = document.getElementById("global-next") as HTMLElement;
 
-let activeSwiper: Swiper | null = swipers[0]; // стартовый Swiper dot-1
-activeSwiper = swipers[0]; // просто присваиваем, если нужно обновить
+let activeSwiper: Swiper | null = swipers[0];
+activeSwiper = swipers[0];
 
 
 function updateGlobalNavigation(index: number) {
