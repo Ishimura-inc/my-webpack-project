@@ -60,6 +60,11 @@ http://localhost:8080
 
 - src
 - - assets/fonts
+- - - BebasNeue-Regular.woff2
+- - - PTSans-Bold.woff2
+- - - PTSans-BoldItalic.woff2
+- - - PTSans-Italic.woff2
+- - - PTSans-Regular.woff2
 - - styles
 - - - fonts.scss
 - - - krug.scss
