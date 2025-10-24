@@ -38,3 +38,37 @@ android studio от get brains
 `adb reverse tcp:8080 tcp:8080`
 и после открываем на телефоне
 http://localhost:8080
+
+---
+установлено во время сборки:
+- node.js v24.5.0
+- css-loader@7.1.2
+- gsap@3.13.0
+- html-webpack-plugin@5.6.4
+- sass-loader@16.0.5
+- sass@1.93.2
+- style-loader@4.0.0
+- swiper@12.0.3
+- ts-loader@9.5.4
+- typescript@5.9.3
+- webpack-cli@6.0.1
+- webpack-dev-server@5.2.2
+- webpack@5.102.1
+
+##Структура:
+---
+
+- src
+ - assets/fonts
+ - styles
+ - - fonts.scss
+ - - krug.scss
+ - - main.scss
+ - index.html
+ - index.ts
+- .gitignore
+- package-lock.json
+- package.json
+- readme.md
+- tsconfig.json
+- webpack.config.js
