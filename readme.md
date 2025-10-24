@@ -21,11 +21,6 @@
 ## Далее команду в консоль
 `npm install`
 
-### На всякий случай еще эти команды в консоле
-`npm install gsap`
-и
-`npm install swiper`
-
 далее набираем
 
 npm start и он откроет браузер по пути http://localhost:8080/
