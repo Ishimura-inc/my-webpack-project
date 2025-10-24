@@ -55,15 +55,15 @@ http://localhost:8080
 - webpack-dev-server@5.2.2
 - webpack@5.102.1
 
-##Структура:
+## Структура:
 ---
 
 - src
- - assets/fonts
- - styles
- - - fonts.scss
- - - krug.scss
- - - main.scss
+- - assets/fonts
+- - styles
+- - - fonts.scss
+- - - krug.scss
+- - - main.scss
  - index.html
  - index.ts
 - .gitignore
