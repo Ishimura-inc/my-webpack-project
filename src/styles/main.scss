@@ -7,14 +7,7 @@ $gap: 80px; // расстояние между линиями
 body {
 background: #F4F5F9;
   min-height: 100vh;
-//  background-image: repeating-linear-gradient(
-//    to right,
-//    $line-color, 
-//    $line-color $line-width,
-//    transparent $line-width,
-//    transparent $gap
-//  );
-  
+
    @media (max-width: 320px) {
     background-image: none;
   }
@@ -59,6 +52,21 @@ p {
   }
 }
 
+@media (max-width: 600px) {
+.left-present-text {
+top: 70px;
+ }
+}
+
+
+@media (max-width: 600px) {
+.left-present-text p {
+margin-left: 40px;
+font-size: 36px;
+ }
+}
+
+
 .vertical-line {
   position: fixed;
   top: 0;
@@ -72,7 +80,7 @@ p {
 
 .vertical-line.left,
 .vertical-line.right {
-  position: absolute; // внутри container
+  position: absolute;
   top: 0;
   width: 1px;
   background-color: #42567A;
@@ -93,9 +101,29 @@ opacity: 0.1;
 .left-line-gradient {
 height: 120px;
 width: 5px;
-//background-color: #42567A;
 background: linear-gradient(to bottom, #3877EE, #EF5DA8);
 position: absolute;
 z-index: 5;
 margin-top: 0.625em;
+}
+
+@media (max-width: 600px) {
+.left-line-gradient {
+   display: none;
+ }
+}
+
+
+@media (max-width: 600px) {
+.horizontal-line-small {
+top: 460px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #42567A;
+    z-index: 0;
+    opacity: 0.1;
+	margin: 0 40px 40px;
+ }
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <title>Круг с точками</title>
 </head>
@@ -12,7 +13,6 @@
 	  даты</p>
     </div>
 	
-
     <!-- Круг с dot-ами -->
     <div class="circle-container">
       <div class="dot dot-1"></div>
@@ -26,9 +26,7 @@
 	<div class="date-display">
   <span class="date-start">1930</span> <span class="date-end">1945</span>
 </div>
-	
-	
-	
+
 	<div class="vertical-line"></div>
 	<div class="horizontal-line"></div>
 	<div class="vertical-line left"></div>
@@ -38,12 +36,12 @@
     <div class="controls">
       <div class="current-dot-display"></div>
 	  <div class="controls-flex">
-      <button id="rotate-left">
+      <button id="rotate-right">
 <svg width="24" height="24" viewBox="0 0 24 24">
   <path d="M15 6 L9 12 L15 18" stroke="black" stroke-width="2" fill="none"/>
 </svg>
       </button>
-      <button id="rotate-right">
+      <button id="rotate-left">
 <svg width="24" height="24" viewBox="0 0 24 24">
   <path d="M9 6 L15 12 L9 18" stroke="black" stroke-width="2" fill="none"/>
 </svg>
@@ -51,6 +49,8 @@
 	  </div>
     </div>
 	
+<div class="another-text" ></div>
+<div class="horizontal-line-small"></div>
 
     <!-- Swiper-ы для каждого dot -->
 	<div class="swiper-control-button">
@@ -66,49 +66,49 @@
           <div class="swiper-wrapper">
 		  
             <div class="swiper-slide">
-			<div class="year">2015</div> 
+			<div class="year">1930</div> 
 			<div class="text-slide">
 			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
 			</div>
 			
             <div class="swiper-slide">
-			<div class="year">2016</div> 
+			<div class="year">1931</div> 
 			<div class="text-slide">
 			14 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды и где то еще в Скандинавии и Туркмении
 			</div>
 			</div>
 			
             <div class="swiper-slide">
-			<div class="year">2017</div>
+			<div class="year">1935</div>
 			<div class="text-slide">
 			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
 			</div>
 			
 			<div class="swiper-slide">
-			<div class="year">2018</div>
+			<div class="year">1940</div>
 			<div class="text-slide">
 			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
 			</div>
 			
 			<div class="swiper-slide">
-			<div class="year">2019</div>
+			<div class="year">1941</div>
 			<div class="text-slide">
 			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
 			</div>
 			
 			<div class="swiper-slide">
-			<div class="year">2020</div>
+			<div class="year">1942</div>
 			<div class="text-slide">
 			18 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
 			</div>
 			
 			<div class="swiper-slide">
-			<div class="year">2021</div>
+			<div class="year">1943</div>
 			<div class="text-slide">
 			19 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
@@ -116,7 +116,7 @@
 			
 			
 			<div class="swiper-slide">
-			<div class="year">2022</div>
+			<div class="year">1944</div>
 			<div class="text-slide">
 			20 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
@@ -124,7 +124,7 @@
 			
 			
 			<div class="swiper-slide">
-			<div class="year">2023</div>
+			<div class="year">1945</div>
 			<div class="text-slide">
 			21 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
 			</div>
@@ -135,24 +135,82 @@
 		
         <!-- Swiper для dot-2 -->
         <div class="swiper mySwiper dot-2-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">Dot 2 - Слайд 1</div>
-            <div class="swiper-slide">Dot 2 - Слайд 2</div>
-            <div class="swiper-slide">Dot 2 - Слайд 3</div>
-			<div class="swiper-slide">Dot 2 - Слайд 4</div>
-			<div class="swiper-slide">Dot 2 - Слайд 5</div>
-          </div>
+		<div class="swiper-wrapper">
+            <div class="swiper-slide">
+			<div class="year">1946</div> 
+			<div class="text-slide">
+			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">1950</div> 
+			<div class="text-slide">
+			14 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды и где то еще в Скандинавии и Туркмении
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">1951</div>
+			<div class="text-slide">
+			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">1952</div>
+			<div class="text-slide">
+			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">1969</div>
+			<div class="text-slide">
+			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			</div>
           <div class="swiper-pagination"></div>
         </div>
 
         <!-- Swiper для dot-3 -->
         <div class="swiper mySwiper dot-3-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Dot 3 - Слайд 1</div>
-            <div class="swiper-slide">Dot 3 - Слайд 2</div>
-            <div class="swiper-slide">Dot 3 - Слайд 3</div>
-			<div class="swiper-slide">Dot 3 - Слайд 4</div>
-			<div class="swiper-slide">Dot 3 - Слайд 5</div>
+			<div class="swiper-slide">
+			<div class="year">1970</div> 
+			<div class="text-slide">
+			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">1974</div> 
+			<div class="text-slide">
+			14 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды и где то еще в Скандинавии и Туркмении
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">1975</div>
+			<div class="text-slide">
+			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">1980</div>
+			<div class="text-slide">
+			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">1985</div>
+			<div class="text-slide">
+			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -160,11 +218,40 @@
         <!-- Swiper для dot-4 -->
         <div class="swiper mySwiper dot-4-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Dot 4 - Слайд 1</div>
-            <div class="swiper-slide">Dot 4 - Слайд 2</div>
-            <div class="swiper-slide">Dot 4 - Слайд 3</div>
-			<div class="swiper-slide">Dot 4 - Слайд 4</div>
-			<div class="swiper-slide">Dot 4 - Слайд 5</div>
+			<div class="swiper-slide">
+			<div class="year">1986</div> 
+			<div class="text-slide">
+			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">1987</div> 
+			<div class="text-slide">
+			14 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды и где то еще в Скандинавии и Туркмении
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">1990</div>
+			<div class="text-slide">
+			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">1991</div>
+			<div class="text-slide">
+			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">1999</div>
+			<div class="text-slide">
+			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -172,11 +259,40 @@
         <!-- Swiper для dot-5 -->
         <div class="swiper mySwiper dot-5-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Dot 5 - Слайд 1</div>
-            <div class="swiper-slide">Dot 5 - Слайд 2</div>
-            <div class="swiper-slide">Dot 5 - Слайд 3</div>
-			<div class="swiper-slide">Dot 5 - Слайд 4</div>
-			<div class="swiper-slide">Dot 5 - Слайд 5</div>
+			<div class="swiper-slide">
+			<div class="year">2000</div> 
+			<div class="text-slide">
+			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">2001</div> 
+			<div class="text-slide">
+			11 сентября - Падение башен близнецов в США
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">2008</div>
+			<div class="text-slide">
+			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2011</div>
+			<div class="text-slide">
+			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2015</div>
+			<div class="text-slide">
+			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -184,11 +300,40 @@
         <!-- Swiper для dot-6 -->
         <div class="swiper mySwiper dot-6-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Dot 6 - Слайд 1</div>
-            <div class="swiper-slide">Dot 6 - Слайд 2</div>
-            <div class="swiper-slide">Dot 6 - Слайд 3</div>
-			<div class="swiper-slide">Dot 6 - Слайд 4</div>
-			<div class="swiper-slide">Dot 6 - Слайд 5</div>
+            <div class="swiper-slide">
+			<div class="year">2016</div> 
+			<div class="text-slide">
+			13 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">2017</div> 
+			<div class="text-slide">
+			14 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+            <div class="swiper-slide">
+			<div class="year">2018</div>
+			<div class="text-slide">
+			15 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2019</div>
+			<div class="text-slide">
+			16 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="year">2023</div>
+			<div class="text-slide">
+			17 сентября - частное солнечное затмение, вилимое в Южной Африке и части Антарктиды
+			</div>
+			</div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -200,12 +345,8 @@
 <button id="global-next"><svg width="20" height="20" viewBox="0 0 24 24">
 <path d="M9 6 L15 12 L9 18" stroke="black" stroke-width="2.4" fill="none"/>
 </svg></button>
-
 	</div>
-
-
-    <!-- Текст над активным dot -->
-    <div class="active-text" aria-hidden="true"></div>
+  <!-- <div class="active-text" aria-hidden="true"></div>-->
   </div>
 </body>
 </html>

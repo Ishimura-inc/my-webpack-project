@@ -324,7 +324,6 @@ const globalPrev = document.getElementById("global-prev") as HTMLElement;
 const globalNext = document.getElementById("global-next") as HTMLElement;
 
 let activeSwiper: Swiper | null = swipers[0]; // стартовый Swiper dot-1
-
 activeSwiper = swipers[0]; // просто присваиваем, если нужно обновить
 
 
@@ -352,3 +351,18 @@ globalNext.addEventListener("click", () => {
 });
 
 updateGlobalNavigation(0);
+
+const anotherDiv = document.querySelector('.another-text') as HTMLDivElement | null;
+const activeTextDiv = document.querySelector('.active-text') as HTMLDivElement | null;
+
+if (anotherDiv && activeTextDiv) {
+    // Сразу при загрузке страницы копируем текст
+    anotherDiv.textContent = activeTextDiv.textContent;
+
+    // А дальше следим за изменениями
+    const observer = new MutationObserver(() => {
+        anotherDiv.textContent = activeTextDiv.textContent;
+    });
+
+    observer.observe(activeTextDiv, { childList: true, subtree: true });
+}
