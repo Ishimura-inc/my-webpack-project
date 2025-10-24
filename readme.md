@@ -64,7 +64,6 @@ http://localhost:8080
 - webpack@5.102.1
 
 ## Структура:
----
 
 - src
 - - assets/fonts
