@@ -287,6 +287,17 @@ top: 250px;
  }
 }
 
+@media (max-width: 380px) {
+.date-display {
+font-size: 64px;
+ }
+}
+
+@media (max-width: 340px) {
+.date-display {
+font-size: 60px;
+ }
+}
 
 
 #rotate-left {
@@ -410,8 +421,13 @@ top: 250px;
   }
 }
 
+.another-text {
+display: none;
+}
+
 @media (max-width: 600px) {
 .another-text {
+display: block;
 position: absolute;
 margin-left: 40px;
 top: 400px;
