@@ -159,7 +159,7 @@ justify-content: space-between;
 
 .swiper {
   width: 100%;
-  height: 135px;
+  min-height: 150px;
 
   .swiper-slide {
   width: 400px !important;
@@ -197,11 +197,11 @@ justify-content: space-between;
 }
 
 .swiper-top-position {
-  position: absolute;
   top: 841px;
     left: 0;
-    padding-left: 80px;
     max-width: 1200px;
+	flex: 1;                       
+    overflow: hidden; 
   }
   
 .swiper-pagination {
@@ -257,6 +257,11 @@ justify-content: space-between;
       height: 50px;
 	  justify-content: center;
       align-items: center;
+	  transition: background-color 0.5s ease;
+	  
+	  &:hover {
+	  background: #fff;
+	  }
 }
 
 #rotate-right {
@@ -268,6 +273,11 @@ justify-content: space-between;
       height: 50px;
 	  justify-content: center;
       align-items: center;
+	  transition: background-color 0.5s ease;
+	  
+	  &:hover {
+	  background: #fff;
+	  }
 }
 
 #rotate-left svg path {
@@ -276,4 +286,63 @@ justify-content: space-between;
 
 #rotate-right svg path{
   stroke: #42567A; 
+}
+
+.swiper-button-disabled {
+  display: none !important;
+}
+
+
+.global-swiper-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: auto;
+  z-index: 20;
+
+  button {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #42567A;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.swiper-control-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    top: 841px;
+    position: absolute;
+	justify-content: space-evenly;
+}
+
+.swiper-control-button button {
+  flex: 0 0 auto;              
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+}
+
+#global-prev svg path {
+  stroke: #3877EE;
+}
+
+#global-next svg path{
+  stroke: #3877EE; 
 }

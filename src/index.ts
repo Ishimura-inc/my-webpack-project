@@ -116,43 +116,19 @@ const swiperEls = Array.from(document.querySelectorAll<HTMLElement>(".mySwiper")
 
 
 const swipers = swiperEls.map(swiperEl => {
-    const prevBtn = swiperEl.querySelector(".swiper-button-prev") as HTMLElement;
-    const nextBtn = swiperEl.querySelector(".swiper-button-next") as HTMLElement;
-
     return new Swiper(swiperEl, {
         modules: [Navigation, Pagination],
         slidesPerView: "auto",
         loop: false,
         spaceBetween: 30,
         centeredSlides: false,       // <— не центрировать активный
-        navigation: {
-            nextEl: nextBtn,
-            prevEl: prevBtn,
-        },
+
         pagination: {
             el: swiperEl.querySelector(".swiper-pagination") as HTMLElement,
             clickable: true,
         },
-        on: {
-            init(this: Swiper) {
-                updateNavButtons(this, prevBtn, nextBtn);
-            },
-            slideChange(this: Swiper) {
-                updateNavButtons(this, prevBtn, nextBtn);
-            },
-        },
     });
 });
-
-// === функция обновления стрелок ===
-function updateNavButtons(swiper: Swiper, prevBtn: HTMLElement, nextBtn: HTMLElement) {
-    const { isBeginning, isEnd } = swiper;
-    if (prevBtn) prevBtn.style.display = isBeginning ? "none" : "block";
-    if (nextBtn) nextBtn.style.display = isEnd ? "none" : "block";
-}
-
-
-
 
 // === функция показа Swiper для выбранного dot ===
 function showSwiperForDot(index: number) {
@@ -164,11 +140,6 @@ function showSwiperForDot(index: number) {
         if (isActive) {
             // Обновляем Swiper, чтобы он знал свои размеры и положение
             swiper.update();
-
-            // Теперь можно безопасно обновить состояние стрелок
-            const prevBtn = el.querySelector(".swiper-button-prev") as HTMLElement;
-            const nextBtn = el.querySelector(".swiper-button-next") as HTMLElement;
-            updateNavButtons(swiper, prevBtn, nextBtn);
         }
     });
 }
@@ -209,6 +180,7 @@ function setActiveDot(index: number, direction: "left" | "right" | null = null) 
                 activeText.style.opacity = "1";
                 updateDotDisplay(index);
                 updateDates(index);
+                updateGlobalNavigation(index);
             },
         });
 
@@ -346,3 +318,37 @@ updateLines();
 
 // При ресайзе окна
 window.addEventListener("resize", updateLines);
+
+
+const globalPrev = document.getElementById("global-prev") as HTMLElement;
+const globalNext = document.getElementById("global-next") as HTMLElement;
+
+let activeSwiper: Swiper | null = swipers[0]; // стартовый Swiper dot-1
+
+activeSwiper = swipers[0]; // просто присваиваем, если нужно обновить
+
+
+function updateGlobalNavigation(index: number) {
+    activeSwiper = swipers[index];
+
+    // Обновляем состояние кнопок (включить/выключить)
+    if (activeSwiper.isBeginning) globalPrev.style.visibility = "hidden";
+    else globalPrev.style.visibility = "visible";
+
+    if (activeSwiper.isEnd) globalNext.style.visibility = "hidden";
+    else globalNext.style.visibility = "visible";
+}
+
+globalPrev.addEventListener("click", () => {
+    if (!activeSwiper) return;
+    activeSwiper.slidePrev();
+    updateGlobalNavigation(swipers.indexOf(activeSwiper));
+});
+
+globalNext.addEventListener("click", () => {
+    if (!activeSwiper) return;
+    activeSwiper.slideNext();
+    updateGlobalNavigation(swipers.indexOf(activeSwiper));
+});
+
+updateGlobalNavigation(0);
