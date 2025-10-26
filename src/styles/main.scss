@@ -30,7 +30,6 @@ position: relative;
 @media (max-width: 1900px) {
     margin-left: auto;
   }
-
 }
 
 
@@ -49,20 +48,15 @@ p {
   white-space: pre-line;
   line-height: 1.2;
   margin-left: 80px;
-  }
-}
-
-@media (max-width: 600px) {
-.left-present-text {
-top: 70px;
- }
-}
-
-
-@media (max-width: 600px) {
-.left-present-text p {
+  
+  @media (max-width: 600px) {
 margin-left: 40px;
 font-size: 36px;
+  } 
+ }
+
+  @media (max-width: 600px) {
+top: 70px;
  }
 }
 
@@ -105,13 +99,12 @@ background: linear-gradient(to bottom, #3877EE, #EF5DA8);
 position: absolute;
 z-index: 5;
 margin-top: 0.625em;
-}
 
 @media (max-width: 600px) {
-.left-line-gradient {
    display: none;
  }
 }
+
 
 
 @media (max-width: 600px) {

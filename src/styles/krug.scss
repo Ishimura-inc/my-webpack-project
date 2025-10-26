@@ -20,7 +20,10 @@ $offset-angle: 30deg;
   top: 215px;
   margin: 0 auto 0 auto;
   
-
+    @media (max-width: 800px) {
+    display: none; 
+  }
+ 
   @for $i from 1 through $total {
     $angle: math.div($i - 1, $N) * 360deg + $offset-angle - 90deg;
 
@@ -62,11 +65,7 @@ $offset-angle: 30deg;
   }
 }
 
-  @media (max-width: 800px) {
-  .circle-container {
-    display: none; 
-  }
-}
+
 
 
 .dot {
@@ -129,18 +128,17 @@ $offset-angle: 30deg;
   margin-left: 80px;
   width: 120px;
   height: 88px;
-}
-
-@media (max-width: 600px) {
-.controls {
+  
+  @media (max-width: 600px) {
     margin-left: 40px;
+ }
+ 
+  button {
+  padding: 10px 10px;
+  cursor: pointer;
  }
 }
 
-.controls button {
-  padding: 10px 10px;
-  cursor: pointer;
-}
 
 .controls-flex {
 display: flex;
@@ -224,13 +222,12 @@ justify-content: space-between;
   
 .swiper-pagination {
   display: none; 
-}
-
-@media (max-width: 600px) {
-  .swiper-pagination {
+  
+  @media (max-width: 600px) {
     display: block; 
   }
 }
+
 
 .swipers-container .swiper {
   display: none;
@@ -257,47 +254,36 @@ justify-content: space-between;
   .date-end {
     color: #EF5DA8;
   }
-}
-
-
-@media (max-width: 1030px) {
-.date-display {
-   font-size: 150px;
-	top: -150px;
+  
+  @media (max-width: 1030px) {
+font-size: 150px;
+top: -150px;
  }
-}
-
-@media (max-width: 800px) {
-.date-display {
+  @media (max-width: 800px) {
 top: 400px;
 font-size: 130px;
  }
-}
-
-@media (max-width: 700px) {
-.date-display {
+ 
+ @media (max-width: 700px) {
 font-size: 100px;
  }
-}
-
-@media (max-width: 600px) {
-.date-display {
+ 
+ @media (max-width: 600px) {
 font-size: 70px;
 top: 250px;
  }
-}
-
-@media (max-width: 380px) {
-.date-display {
+ 
+ @media (max-width: 380px){
 font-size: 64px;
  }
-}
-
-@media (max-width: 340px) {
-.date-display {
+ 
+ @media (max-width: 340px) {
 font-size: 60px;
  }
+ 
 }
+
+
 
 
 #rotate-left {
@@ -377,15 +363,15 @@ font-size: 60px;
     top: 841px;
     position: absolute;
 	justify-content: space-evenly;
-}
-
-
-@media (max-width: 600px) {
-.swiper-control-button {
+	
+	@media (max-width: 600px) {
     top: 500px;
 	gap: 0;
  }
+	
+	
 }
+
 
 .swiper-control-button button {
   flex: 0 0 auto;              
@@ -398,6 +384,7 @@ font-size: 60px;
   border: 0;
   background: #fff;
   box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+  cursor: pointer;
   
    @media (max-width: 600px){
    background: #F4F5F9;
@@ -423,10 +410,8 @@ font-size: 60px;
 
 .another-text {
 display: none;
-}
 
 @media (max-width: 600px) {
-.another-text {
 display: block;
 position: absolute;
 margin-left: 40px;
@@ -438,3 +423,11 @@ color: #42567A;
  }
 }
 
+
+
+.swiper-grab {
+  cursor: grab; /* при наведении — рука */
+}
+.swiper-grab:active {
+  cursor: grabbing; /* при клике/перетаскивании — сжатая рука */
+}
